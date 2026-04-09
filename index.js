@@ -5,7 +5,9 @@ const path = require('path');
 const app = express();
 
 const ffmpegPath = path.join(__dirname, 'ffmpeg');
-
+app.get('/', (req, res) => {
+    res.send('Proxy funcionando');
+});
 app.get('/radio', (req, res) => {
     res.setHeader('Content-Type', 'audio/mpeg');
 
